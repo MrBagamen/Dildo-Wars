@@ -7,7 +7,7 @@ Enemy::Enemy(const char* fileName)
 
     srand(time(nullptr));
 
-    soundBuffer.loadFromFile("res/explode.ogg");
+    //soundBuffer.loadFromFile("res/explode.ogg");
     //explodeSound.setBuffer(soundBuffer);
     //explodeSound.setVolume(5);
 }
