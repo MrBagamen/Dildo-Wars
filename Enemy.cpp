@@ -7,7 +7,7 @@ Enemy::Enemy(const char* fileName)
 
     srand(time(nullptr));
 
-    soundBuffer.loadFromFile("res/explode.ogg");
+    //soundBuffer.loadFromFile("res/explode.ogg");
     //explodeSound.setBuffer(soundBuffer);
     //explodeSound.setVolume(5);
 }
@@ -44,7 +44,7 @@ void Enemy::Cycle(sf::RenderWindow &w, float dt, std::vector<a> col, int &score)
     }
     if(spawnClock.getElapsedTime().asMilliseconds() >= 800)
     {
-        a en = {rand()%650, 50};
+        a en{static_cast<float>(rand() % 650), 50.0f};
         enemy.push_back(en);
         spawnClock.restart();
     }
